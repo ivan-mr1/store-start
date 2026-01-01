@@ -1,14 +1,9 @@
-//@use "sass:math" as math;
-@use "../config/functions" as *;
-@use "../config/mixins" as *;
-//@use "../config/variables" as global;
-@use '../config/css-variables' as *;
+@use '../helpers' as *;
 
-
-//=============================
-
-
-
-
-
-//=============================
+.header-block {
+  &__title {
+    font-size: rem(24);
+    font-weight: 600;
+    text-align: center;
+  }
+}

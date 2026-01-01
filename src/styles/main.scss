@@ -1,20 +1,34 @@
-// @use 'config/fonts';
-// @use 'config/icons';
- @use 'config/variables';
- @use 'config/css-variables';
- @use 'config/reset';
- @use 'config/setting';
+@use 'variables';
+@use 'reset';
+@use 'svg';
+@use 'fonts/fonts';
+@use 'utils';
+@use 'globals';
+@use 'helpers-classes';
+@use '../components/video/video-bcg/video-bcg-fon';
+@use '../components/form/button';
+@use '../components/hover/hover-link';
+@use '../components/soc1al/social';
+@use '../components/scrollUpButton/scroll-up-button';
+@use '../components/scrollDownButton/scrollDownButton';
+@use '../components/scroller/scroller';
+@use '../components/counter-icon/counter-icon';
+@use '../components/popup/popup';
+@use '../shop/product-card/card';
+@use '../shop/products/products';
+@use '../shop/pagination/pagination';
+@use '../shop/cart/cart';
+@use '../shop/cart/quantity';
+@use '../shop/cart/summary';
+@use '../shop/cart/cart-item';
 
- @use 'base/base';
-
- @use 'blocks/page';
- @use 'blocks/common';
- @use 'blocks/header';
- @use 'blocks/footer';
-// @use 'blocks/hero';
-// @use 'blocks/second';
-@use 'blocks/article';
-
-@use 'blocks/cart-modal';
-@use 'blocks/products';
-@use 'blocks/pagination';
+//  Page Blocks
+@use 'blocks/page';
+@use 'blocks/common';
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/hero';
+@use 'blocks/about';
+@use 'blocks/partners';
+@use '../shop/favorite/favorite';
+@use '../shop/favorite/favorite-product';

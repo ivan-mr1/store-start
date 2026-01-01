@@ -1,32 +1,15 @@
-В сборку добавлены модули:
+# Optica shop
 
-- scrollUp
-- addDate
-- timer-countdown
-- tabs
-- popup
-- spollers
-- header-burger
-- page-navigation
+- Deploy: [link](https://ivan-mr1.github.io/store-start/dist/)
 
-Требования к именам коммитов
+- Technologies: HTML, SCSS, Javascript, Vite, Eslint, Stylelint, Prettier
 
-- Названия коммитов должны быть согласно гайдлайну
-- Тип коммита должен быть только в нижнем регистре (feat, fix, refactor, docs, style, chore и т.д.)
-- Должен использоваться present tense ("add feature" not "added feature")
-- Должен использоваться imperative mood ("move cursor to..." not "moves cursor to...")
+- Google Page Speed:
+  <img width="871" height="677" alt="image" src="https://github.com/user-attachments/assets/4a7c2dcc-977a-49ed-a536-6af3df25c9e0" />
 
-- init: - используется для начала проекта/таска.
-- feat: - это реализованная новая функциональность из технического задания (добавил поддержку зумирования, добавил footer, добавил карточку продукта).
-- fix: - исправил ошибку в ранее реализованной функциональности.
-- refactor: - новой функциональности не добавлял/поведения не менял. Файлы в другие места положил, удалил, добавил. Улучшил алгоритм, без изменения функциональности.
-- docs: - используется при работе с документацией/readme проекта.
-- style: - используется при изменениях стиля и оформления кода.
-- chore: - используется, когда не меняются исходные файлы и файлы тестов.
+- Screenshot:
+  <img width="1900" height="4274" alt="Image" src="https://github.com/user-attachments/assets/50afa59d-f7db-4fc0-b80e-684453d3d396" />
 
-работа со сборкой 
+  <img width="1900" height="4274" alt="Image" src="https://github.com/user-attachments/assets/7e22d57c-760f-48c8-b34d-02191b8ad108" />
 
-- npm install
-- npm run dev
-- npm run build
-- npm run preview
+  <img width="1900" height="2188" alt="Image" src="https://github.com/user-attachments/assets/bda163d1-81c7-4b66-ac98-64db882ccdf1" />

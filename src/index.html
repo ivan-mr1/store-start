@@ -1,161 +1,462 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Магазин сучасної оптики: широкий вибір стильних оправ, сонцезахисних окулярів та контактних лінз. Професійна перевірка зору та виготовлення окулярів будь-якої складності."
+    />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>shop</title>
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-	<link rel="stylesheet" href="styles/main.scss">
-	<script defer type="module" src="js/app.js"></script>
-</head>
+    <title>Оптика — Магазин окулярів та аксесуарів | Перевірка зору</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="styles/main.scss" />
+    <script type="module" src="js/app.js"></script>
+  </head>
 
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<a href="#" class="header__logo"><img src="assets/img/logo-min.svg" alt="logo"></a>
-				<div class="header__action">
-					<div class="search-bar">
-						<input type="text" placeholder="search" class="js-input-search">
-						<button type="button">
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-								<circle cx="11" cy="11" r="8"></circle>
-								<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-							</svg>
-						</button>
-					</div>
-					<div class="header__cart">
-						<span class="shopping-cart js-cart-icon js-cart-btn">
-							<!-- <span class="counter js-cart-current-count">1</span> -->
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 20">
-								<path
-									d="M4.258 0c.45 0 .842.31.944.738l.749 2.649h15.132a.972.972 0 01.945 1.207L20.21 11.94a.973.973 0 01-.945.74H7.643a.973.973 0 01-.947-.748l.005.017L3.503 1.947H.973A.973.973 0 01.973 0h3.285zM19.84 5.334H6.497l1.895 5.398h10.113l1.335-5.398zM8.857 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.716-2.716 2.719 2.719 0 012.716-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45zM17.901 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.715-2.716 2.719 2.719 0 012.715-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45z" />
-							</svg>
-						</span>
-					</div>
-				</div>
-			</div>
-		</header>
-		<main class="page">
+  <body>
+    <div class="wrapper">
+      <header class="header" data-header data-right-padding>
+        <div class="header__container">
+          <a href="index.html" class="logo header__logo">Optica</a>
+          <div data-header-overlay class="header__overlay">
+            <nav class="header__menu menu" data-header-menu>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#about" class="menu__link hover-link">ПРО НАС</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#products" class="menu__link hover-link">ПРОДУКТИ</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#footer" class="menu__link hover-link">КОНТАКТИ</a>
+                </li>
+              </ul>
+              <div class="header__soc1al soc1al visible-mobile">
+                <ul class="soc1al__list">
+                  <li class="soc1al__item">
+                    <a
+                      href="https://t.me/Optikaonline"
+                      class="soc1al__link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Telegram"
+                      title="Telegram"
+                    >
+                      <svg class="svg">
+                        <use xlink:href="#icon-colored-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc1al__item">
+                    <a
+                      href="https://wa.me/380974501872"
+                      class="soc1al__link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="whatsapp"
+                      title="whatsapp"
+                    >
+                      <svg class="svg">
+                        <use xlink:href="#icon-colored-whatsapp"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc1al__item">
+                    <a
+                      href="https://www.instagram.com/optica.ukraine.online/"
+                      class="soc1al__link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Instagram"
+                      title="Instagram"
+                    >
+                      <svg class="svg">
+                        <use xlink:href="#icon-colored-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="header__actions">
+              <div
+                data-favorite
+                class="header__action header__favorite favorite"
+              >
+                <button
+                  data-favorite-btn
+                  type="button"
+                  class="favorite-btn counter-icon"
+                  aria-label="Open favorite"
+                  title="Open favorite"
+                >
+                  <span class="counter-icon__inner">
+                    <svg class="svg svg--40">
+                      <use xlink:href="#icon-monochrome-favorite"></use>
+                    </svg>
+                    <span data-favorite-counter class="counter-icon__count"
+                      >0</span
+                    >
+                  </span>
+                </button>
+                <div class="favorite__content">
+                  <ul data-favorite-list class="favorite__list"></ul>
+                  <div class="favorite__bottom">
+                    <div class="favorite__fullprice-inner">
+                      <span>Разом:</span>
+                      <span class="favorite__fullprice">5680 грн</span>
+                    </div>
+                    <a
+                      href="cart.html"
+                      target="_blank"
+                      rel="noopener"
+                      class="favorite__btn button button--min"
+                    >
+                      Кошик
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="cart.html"
+                class="header__action header__cart counter-icon"
+                aria-label="Open cart"
+                title="Open cart"
+              >
+                <span class="counter-icon__inner">
+                  <svg class="svg svg--40">
+                    <use xlink:href="#icon-monochrome-cart"></use>
+                  </svg>
+                  <span data-cart-counter class="counter-icon__count">0</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="header__burger-button burger-button"
+            data-header-burger-btn
+            aria-expanded="false"
+            aria-label="Open or close menu"
+            title="Open or close menu"
+          >
+            <span class="burger-button__inner">
+              <span class="burger-button__line"></span>
+              <span class="burger-button__line"></span>
+              <span class="burger-button__line"></span>
+            </span>
+          </button>
+        </div>
+      </header>
+      <main class="page">
+        <section
+          class="parent-video-fon page__hero hero"
+          aria-labelledby="hero-title"
+        >
+          <div class="hero__container">
+            <div class="hero__body">
+              <div class="hero__subtitle">
+                <p>
+                  Завітайте до нашого магазину — ми допоможемо підібрати
+                  ідеальні окуляри та надамо безкоштовну консультацію
+                </p>
+              </div>
+              <h1 class="hero__title" id="hero-title">
+                Ми допоможемо вам побачити світ по-новому.
+              </h1>
+              <div class="hero__buttons">
+                <a href="#" class="hero__button button" data-goto=".about"
+                  >ПРО НАС</a
+                >
+                <a href="#" class="hero__button button" data-goto=".products"
+                  >ПРОДУКТИ</a
+                >
+              </div>
+            </div>
+          </div>
+          <video class="video-fon" autoplay muted loop>
+            <source type="video/mp4" src="assets/video/10.mp4" />
+          </video>
+          <button
+            type="button"
+            class="scroll-down-btn"
+            data-goto=".about"
+            title="scroll down"
+            aria-label="scroll-down"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="80"
+              viewBox="0 0 50 80"
+            >
+              <path
+                class="first-path"
+                fill="#FFFFFF"
+                d="M24.752,79.182c-0.397,0-0.752-0.154-1.06-0.463L2.207,57.234c-0.306-0.305-0.458-0.656-0.458-1.057
+        s0.152-0.752,0.458-1.059l2.305-2.305c0.309-0.309,0.663-0.461,1.06-0.461c0.398,0,0.752,0.152,1.061,0.461l18.119,18.119
+        l18.122-18.119c0.306-0.309,0.657-0.461,1.057-0.461c0.402,0,0.753,0.152,1.059,0.461l2.306,2.305
+        c0.308,0.307,0.461,0.658,0.461,1.059s-0.153,0.752-0.461,1.057L25.813,78.719C25.504,79.027,25.15,79.182,24.752,79.182z"
+              />
+              <path
+                class="second-path"
+                fill="#FFFFFF"
+                d="M24.752,58.25c-0.397,0-0.752-0.154-1.06-0.463L2.207,36.303c-0.306-0.304-0.458-0.655-0.458-1.057
+        c0-0.4,0.152-0.752,0.458-1.058l2.305-2.305c0.309-0.308,0.663-0.461,1.06-0.461c0.398,0,0.752,0.153,1.061,0.461l18.119,18.12
+        l18.122-18.12c0.306-0.308,0.657-0.461,1.057-0.461c0.402,0,0.753,0.153,1.059,0.461l2.306,2.305
+        c0.308,0.306,0.461,0.657,0.461,1.058c0,0.401-0.153,0.753-0.461,1.057L25.813,57.787C25.504,58.096,25.15,58.25,24.752,58.25z"
+              />
+            </svg>
+          </button>
+        </section>
 
-			<div class="cart-modal">
-				<div class="overlay js-overlay js-close-cart"></div>
-				<div class="cart js-cart">
-					<span class="close js-close-modal js-close-cart"></span>
-					<div class="cart__wrapper">
+        <section
+          id="about"
+          class="page__about about"
+          aria-labelledby="about-title"
+        >
+          <div
+            class="scroller descr__scroller"
+            data-direction="left"
+            data-speed="slow"
+          >
+            <ul class="scroller__inner">
+              <li class="scroller__item">Доставка по Україні.</li>
+              <li class="scroller__item">Доставка по Європі.</li>
+              <li class="scroller__item">Гарантійний сервіс.</li>
+              <li class="scroller__item">Безкоштовна консультація.</li>
+              <li class="scroller__item">Доставка по Україні.</li>
+              <li class="scroller__item">Доставка по Європі.</li>
+              <li class="scroller__item">Гарантійний сервіс.</li>
+              <li class="scroller__item">Безкоштовна консультація.</li>
+            </ul>
+          </div>
+          <div class="about__container">
+            <div class="about__wrapper">
+              <div class="ibg about__image">
+                <img
+                  src="assets/img/second/1.webp"
+                  alt="about photo"
+                  class="about__img"
+                  width="452"
+                  height="452"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="about__descr">
+                <div class="about__header header-block">
+                  <h2 class="header-block__title" id="about-title">Про нас</h2>
+                </div>
+                <div class="about__text">
+                  <p>
+                    OPTICA – це більше, ніж просто місце призначення, це подорож
+                    у світ стилю, майстерності та самовираження. Ми вважаємо, що
+                    вибір окулярів має бути натхненним, а не поспіхом. Саме тому
+                    ми створили теплий, гостинний простір, де ви можете
+                    сповільнитися, дослідити виняткові дизайни та відкрити для
+                    себе вироби, які справді відображають вашу особистість.
+                    Відвідайте нас за адресою ..., та відчуйте новий спосіб
+                    бачення – де бачення стає мистецтвом, а окуляри – вашим
+                    вираженням.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-						<div class="cart__empty-container js-cart-empty-container">
-							<div class="cart__empty">Your cart is empty</div>
-							<div class="cart__icon icon">
-								<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
-									<path
-										d="M24 3l-.743 2h-1.929l-3.474 12h-13.239l-4.615-11h16.812l-.564 2h-13.24l2.937 7h10.428l3.432-12h4.195zm-15.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.9-7-1.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
-								</svg>
-							</div>
-						</div>
+        <section
+          class="page__partners partners"
+          aria-labelledby="partners-title"
+        >
+          <div class="partners__container">
+            <div class="partners__header-block header-block">
+              <h2 class="header-block__title" id="partners-title">
+                Популярні бренди
+              </h2>
+            </div>
+            <div
+              class="scroller partners__scroller"
+              data-direction="right"
+              data-speed="fast"
+            >
+              <ul class="scroller__inner">
+                <li class="scroller__item brand">CHANCE</li>
+                <li class="scroller__item brand">DACCHI</li>
+                <li class="scroller__item brand">GUCHINI</li>
+                <li class="scroller__item brand">TEMPO</li>
+                <li class="scroller__item brand">LORIS</li>
+                <li class="scroller__item brand">ALANIE</li>
+                <li class="scroller__item brand">BELLEESSA</li>
+                <li class="scroller__item brand">AGIO</li>
+                <li class="scroller__item brand">SAFILO</li>
+                <li class="scroller__item brand">CORRADO</li>
+                <li class="scroller__item brand">GOOD LUCK</li>
+                <li class="scroller__item brand">SALVO</li>
+                <li class="scroller__item brand">CRISTAL</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-						<div class="cart__order-container js-cart-order-container">
-							<div class="cart__order ">Your order</div>
-							<form action="#" class="cart__form ">
-								<ul class="cart__list js-cart-list">
-
-								</ul>
-								<div class="cart__total-container">
-									<h3 class="cart__title">Total</h3>
-									<div>
-										<span class="cart__total-price js-cart-total-price">14 000</span>
-										<span class="cart__currency">$</span>
-									</div>
-								</div>
-								<div class="cart__btns">
-									<button type="submit" class="cart__btn-order">Place an order</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-			<section id="products" class="page__products products">
-				<div class="products__container">
-					<div class="products__list js-products-list">
-
-						<!-- <article class="products__item product js-product">
-								<div class="product__inner">
-									<div class="product__labels">
-										<div class="product__label product__label_sale js-label-sale">-30%</div>
-										<div class="product__label product__label_new js-label-new">New</div>
-									</div>
-									<a href="#" class="product__image ibg">
-										<img src="assets/img/products/1.webp" class="product__img js-image-card" alt="photo product">
-									</a>
-									<div class="product__body">
-										<div class="product__content">
-											<h3 class="product__title  js-title-card">Product model</h3>
-											<div class="product__text">Description product in the shop</div>
-										</div>
-										<div class="product__prices">
-											<div class="product__price">
-												<span class="product__price-span js-price-card">200</span><span> $</span>
-											</div>
-											<div class="product__price product__price_old">
-												<span class="product__price-span js-price-card-old">600</span><span> $</span>
-											</div>
-										</div>
-										<div class="product__actions actions-product">
-											<div class="actions-product__body">
-												<button type="button" class="actions-product__button btn btn_white js-buy-button">add to cart</button>
-												<a href="#" class="actions-product__link actions-product__link_share js-share-product">Share</a>
-												<a href="#"
-													class="actions-product__link actions-product__link_favorite js-favorite-product">Like</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</article> -->
-
-					</div>
-				</div>
-			</section>
-
-			<div class="pagination__container">
-				<div class="pagination js-pagination hidden">
-					<button type="button" class="pagination-btn pagination-btn-prev js-pagination-btn-prev">
-						<svg style="transform: rotate(180deg) scale(.55);" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-							viewBox="0 0 24 24">
-							<path fill="#84868E" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-						</svg>
-					</button>
-					<ul class="pagination__list js-pagination-list">
-					</ul>
-					<button type="button" class=" pagination-btn pagination-btn-next js-pagination-btn-next">
-						<svg style="transform: rotate(0deg) scale(.55);" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-							viewBox="0 0 24 24">
-							<path fill="#84868E" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-						</svg>
-					</button>
-				</div>
-				<button type="button" class="btn btn-show-more js-btn-show-more">Show more</button>
-			</div>
-
-		</main>
-		<footer id="footer" class="footer">
-			<div class="footer__container">
-			</div>
-		</footer>
-
-		<!-- 
-		<div class="scroll-up">
-			<svg class="scroll-up__svg" xmlns="" viewBox="-2 -2 52 52">
-				<path class="scroll-up__path" d="M 24,0 a24,24 0 0,1 0,48 a24,24 0 0,1 0,-48" />
-			</svg>
-		</div> -->
-
-	</div>
-</body>
-
+        <section
+          id="products"
+          class="page__products products"
+          aria-labelledby="products-title"
+        >
+          <div class="products__container">
+            <div class="products__header header-block">
+              <h1
+                class="header-block__title products__title"
+                id="products-title"
+              >
+                Каталог
+              </h1>
+            </div>
+            <ul class="products__list" data-products-catalog></ul>
+            <div class="pagination__container">
+              <div data-pagination class="pagination hidden">
+                <button
+                  data-pagination-btn-prev
+                  type="button"
+                  class="pagination__btn pagination__btn-prev"
+                >
+                  <svg
+                    style="transform: rotate(180deg) scale(0.55)"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="#84868E"
+                      d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                    />
+                  </svg>
+                </button>
+                <ul data-pagination-list class="pagination__list"></ul>
+                <button
+                  data-pagination-btn-next
+                  type="button"
+                  class="pagination__btn pagination__btn-next"
+                >
+                  <svg
+                    style="transform: rotate(0deg) scale(0.55)"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="#84868E"
+                      d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer id="footer" class="footer">
+        <div class="footer__container">
+          <div class="footer__header">
+            <h2 class="footer__title">Будемо раді вашому зверненню</h2>
+            <div class="footer__text">
+              Звʼяжіться з нами будь-яким зручним для вас способом:
+            </div>
+          </div>
+          <div class="footer__wrapper">
+            <div class="footer__soc1al soc1al">
+              <ul class="soc1al__list">
+                <li class="soc1al__item">
+                  <a
+                    href="https://t.me/Optikaonline"
+                    class="soc1al__link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Telegram"
+                    title="Telegram"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="#icon-colored-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="soc1al__item">
+                  <a
+                    href="https://wa.me/380974501872"
+                    class="soc1al__link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="whatsapp"
+                    title="whatsapp"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="#icon-colored-whatsapp"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="soc1al__item">
+                  <a
+                    href="https://www.instagram.com/optica.ukraine.online/"
+                    class="soc1al__link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Instagram"
+                    title="Instagram"
+                  >
+                    <svg class="svg">
+                      <use xlink:href="#icon-colored-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="footer__contacts">
+              <li class="footer__item">
+                <div class="footer__link-icon">
+                  <svg class="svg svg--20 footer__link-img">
+                    <use xlink:href="#icon-monochrome-phone"></use>
+                  </svg>
+                </div>
+                <a href="tel:+380974501872" class="footer__link"
+                  ><span class="hover-link">+38(097) 450 18 72</span></a
+                >
+              </li>
+              <li class="footer__item">
+                <div class="footer__link-icon">
+                  <svg class="svg svg--20 footer__link-img">
+                    <use xlink:href="#icon-monochrome-phone"></use>
+                  </svg>
+                </div>
+                <a href="tel:+380662303368" class="footer__link"
+                  ><span class="hover-link">+38(066) 230 33 68</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
