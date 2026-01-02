@@ -1,13 +1,13 @@
 import CartService from './CartService.js';
 import CartView from './CartView.js';
-import { EVENTS } from '../constants.js';
+import { EVENTS, SELECTORS } from '../constants.js';
 
 export default class CartList {
   settings = { minQuantity: 1, maxQuantity: 15 };
 
   selectors = {
-    list: '[data-cart-list]',
-    totalPrice: '[data-cart-total-price]',
+    list: SELECTORS.CART_LIST,
+    totalPrice: SELECTORS.CART_TOTAL_PRICE,
   };
 
   constructor(storage, allProducts) {

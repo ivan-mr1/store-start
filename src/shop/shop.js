@@ -7,47 +7,40 @@ import FavoriteList from './favorite/FavoriteList';
 import CounterStorage from './CounterStorage/CounterStorage';
 import CartList from './cart/CartList';
 import ProductDetails from './product-details/ProductDetails';
-import { EVENTS, STORAGE_KEYS } from './constants';
+import { EVENTS, STORAGE_KEYS, SELECTORS } from './constants';
 
 export default function shop() {
-  // 1. Инициализируем хранилища
   const favStorage = new Storage(
     STORAGE_KEYS.FAVORITES,
     EVENTS.FAVORITE_UPDATED,
   );
   const cartStorage = new Storage(STORAGE_KEYS.CART, EVENTS.CART_UPDATED);
 
-  new ProductDetails('[data-product-details]', products, {
+  new ProductDetails(SELECTORS.PRODUCT_DETAILS, products, {
     cart: cartStorage,
     favorite: favStorage,
   });
 
-  // 2. Каталог
   const productList = new RenderProductList(
-    '[data-products-catalog]',
+    SELECTORS.PRODUCT_CATALOG,
     products,
     { favorite: favStorage, cart: cartStorage },
   );
 
-  // 3. Пагинация
-  // Она сама вызовет productList.render() для первой страницы при создании
   new Pagination(productList, products, {
     productsPerPage: 12,
     visibleRange: 2,
   });
 
-  // 4. Избранное и выпадающий список
   new FavoriteDropdown();
   new FavoriteList(favStorage, products, cartStorage);
 
-  // 5. Корзина
   new CartList(cartStorage, products);
 
-  // 6. Счетчики в шапке
   new CounterStorage(
-    '[data-favorite-counter]',
+    SELECTORS.FAVORITE_COUNTER,
     favStorage,
     EVENTS.FAVORITE_UPDATED,
   );
-  new CounterStorage('[data-cart-counter]', cartStorage, EVENTS.CART_UPDATED);
+  new CounterStorage(SELECTORS.CART_COUNTER, cartStorage, EVENTS.CART_UPDATED);
 }

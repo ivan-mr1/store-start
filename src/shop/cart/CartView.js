@@ -1,13 +1,14 @@
 import { formatPrice } from '../utils.js';
+import { I18N, ATTRIBUTES, SELECTORS } from '../constants.js';
 
 export default class CartView {
   defaultSelectors = {
-    list: '[data-cart-list]',
-    totalPrice: '[data-cart-total-price]',
-    productId: 'data-product-id',
-    btnMinus: 'data-cart-minus',
-    btnPlus: 'data-cart-plus',
-    btnRemove: 'data-cart-remove-btn',
+    list: SELECTORS.CART_LIST,
+    totalPrice: SELECTORS.CART_TOTAL_PRICE,
+    productId: ATTRIBUTES.PRODUCT_ID,
+    btnMinus: ATTRIBUTES.CART.MINUS,
+    btnPlus: ATTRIBUTES.CART.PLUS,
+    btnRemove: ATTRIBUTES.CART.REMOVE,
   };
 
   defaultClasses = {
@@ -28,12 +29,12 @@ export default class CartView {
   };
 
   defaultI18n = {
-    emptyCart: 'Ваш кошик порожній',
-    currency: 'грн',
-    articleLabel: 'Артикул:',
-    deleteLabel: 'Видалити товар',
-    minusLabel: 'Зменшити кількість',
-    plusLabel: 'Збільшити кількість',
+    emptyCart: I18N.EMPTY_CART,
+    currency: I18N.CURRENCY,
+    articleLabel: I18N.ARTICLE,
+    deleteLabel: I18N.DELETE_ITEM,
+    minusLabel: I18N.DECREASE_QUANTITY,
+    plusLabel: I18N.INCREASE_QUANTITY,
     iconTrash: `
       <svg class="svg svg--20">
         <use xlink:href="#icon-monochrome-trash"></use>
