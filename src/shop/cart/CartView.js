@@ -1,3 +1,5 @@
+import { formatPrice } from '../utils.js';
+
 export default class CartView {
   defaultSelectors = {
     list: '[data-cart-list]',
@@ -39,13 +41,12 @@ export default class CartView {
     `,
   };
 
-  constructor(options = {}, settings = {}, formatter = null) {
+  constructor(options = {}, settings = {}) {
     this.selectors = { ...this.defaultSelectors, ...options.selectors };
     this.classes = { ...this.defaultClasses, ...options.classes };
     this.i18n = { ...this.defaultI18n, ...options.i18n };
 
     this.settings = settings;
-    this.formatter = formatter || new Intl.NumberFormat('uk-UA');
 
     this.container = document.querySelector(this.selectors.list);
     this.totalPriceElements = document.querySelectorAll(
@@ -72,7 +73,7 @@ export default class CartView {
   }
 
   updateTotalDisplay(total) {
-    const formatted = this.formatter.format(total);
+    const formatted = formatPrice(total);
     this.totalPriceElements.forEach((el) => {
       el.innerHTML = `${formatted}&nbsp;${this.i18n.currency}`;
     });
@@ -106,7 +107,7 @@ export default class CartView {
         </div>
         <div class="${c.itemActions}">
           <div class="${c.priceBlock}">
-            <span class="${c.price}">${this.formatter.format(price * count)}&nbsp;${t.currency}</span>
+            <span class="${c.price}">${formatPrice(price * count)}&nbsp;${t.currency}</span>
           </div>
           <div class="${c.quantity} quantity">
             <button

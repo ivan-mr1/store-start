@@ -1,3 +1,6 @@
+import { EVENTS, STATES } from '../constants.js';
+import { formatPrice } from '../utils.js';
+
 export default class ProductCard {
   defaultSettings = {
     rootAttribute: 'data-product',
@@ -22,8 +25,8 @@ export default class ProductCard {
     priceWrapper: 'product__price product-price',
     priceCurrent: 'product__price-current',
     buyBtn: 'button button--card product__btn',
-    active: 'is-active',
-    inCart: 'is-in-cart',
+    active: STATES.ACTIVE,
+    inCart: STATES.IN_CART,
   };
 
   defaultI18n = {
@@ -49,7 +52,6 @@ export default class ProductCard {
     this.classes = { ...this.defaultClasses, ...options.classes };
     this.i18n = { ...this.defaultI18n, ...options.i18n };
 
-    this.formatter = options.formatter || new Intl.NumberFormat('uk-UA');
     this.element = null;
     this.subElements = {};
 
@@ -89,7 +91,7 @@ export default class ProductCard {
           <div class="${c.article}">${t.articlePrefix} ${article}</div>
           <div class="${c.priceWrapper}">
             <div ${a.price} class="${c.priceCurrent}">
-              ${this.formatter.format(price)} ${t.currency}
+              ${formatPrice(price)} ${t.currency}
             </div>
           </div>
           <button type="button" 
@@ -172,8 +174,8 @@ export default class ProductCard {
       }
     });
 
-    document.addEventListener('favorite:updated', this.onFavoriteUpdate);
-    document.addEventListener('cart:updated', this.onCartUpdate);
+    document.addEventListener(EVENTS.FAVORITE_UPDATED, this.onFavoriteUpdate);
+    document.addEventListener(EVENTS.CART_UPDATED, this.onCartUpdate);
   }
 
   #updateBuyButton(isInCart) {
@@ -193,8 +195,11 @@ export default class ProductCard {
 
   destroy() {
     if (this.element) {
-      document.removeEventListener('favorite:updated', this.onFavoriteUpdate);
-      document.removeEventListener('cart:updated', this.onCartUpdate);
+      document.removeEventListener(
+        EVENTS.FAVORITE_UPDATED,
+        this.onFavoriteUpdate,
+      );
+      document.removeEventListener(EVENTS.CART_UPDATED, this.onCartUpdate);
       this.element.remove();
     }
     this.element = null;

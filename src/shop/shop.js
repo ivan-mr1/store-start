@@ -6,11 +6,21 @@ import FavoriteDropdown from './favorite/FavoriteDropdown';
 import FavoriteList from './favorite/FavoriteList';
 import CounterStorage from './CounterStorage/CounterStorage';
 import CartList from './cart/CartList';
+import ProductDetails from './product-details/ProductDetails';
+import { EVENTS, STORAGE_KEYS } from './constants';
 
 export default function shop() {
   // 1. Инициализируем хранилища
-  const favStorage = new Storage('user_favorites', 'favorite:updated');
-  const cartStorage = new Storage('user_cart', 'cart:updated');
+  const favStorage = new Storage(
+    STORAGE_KEYS.FAVORITES,
+    EVENTS.FAVORITE_UPDATED,
+  );
+  const cartStorage = new Storage(STORAGE_KEYS.CART, EVENTS.CART_UPDATED);
+
+  new ProductDetails('[data-product-details]', products, {
+    cart: cartStorage,
+    favorite: favStorage,
+  });
 
   // 2. Каталог
   const productList = new RenderProductList(
@@ -34,6 +44,10 @@ export default function shop() {
   new CartList(cartStorage, products);
 
   // 6. Счетчики в шапке
-  new CounterStorage('[data-favorite-counter]', favStorage, 'favorite:updated');
-  new CounterStorage('[data-cart-counter]', cartStorage, 'cart:updated');
+  new CounterStorage(
+    '[data-favorite-counter]',
+    favStorage,
+    EVENTS.FAVORITE_UPDATED,
+  );
+  new CounterStorage('[data-cart-counter]', cartStorage, EVENTS.CART_UPDATED);
 }

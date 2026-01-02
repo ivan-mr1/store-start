@@ -1,5 +1,6 @@
 import CartService from './CartService.js';
 import CartView from './CartView.js';
+import { EVENTS } from '../constants.js';
 
 export default class CartList {
   settings = { minQuantity: 1, maxQuantity: 15 };
@@ -14,11 +15,7 @@ export default class CartList {
 
     this.service = new CartService(allProducts);
 
-    this.view = new CartView(
-      { selectors: this.selectors },
-      this.settings,
-      new Intl.NumberFormat('uk-UA'),
-    );
+    this.view = new CartView({ selectors: this.selectors }, this.settings);
 
     if (this.view.container) {
       this.init();
@@ -28,7 +25,7 @@ export default class CartList {
   init() {
     this.refresh();
     this.initEventListeners();
-    document.addEventListener('cart:updated', () => this.refresh());
+    document.addEventListener(EVENTS.CART_UPDATED, () => this.refresh());
   }
 
   refresh() {
