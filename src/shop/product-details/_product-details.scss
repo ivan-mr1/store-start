@@ -83,28 +83,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: rem(50);
-    height: rem(50);
-    color: var(--color-dark);
-    background: transparent;
-    border: 1px solid var(--color-dark);
+    width: 40px;
+    height: 40px;
+    color: var(--color-orange);
+    background-color: var(--color-white);
+    border: 1px solid #eeeeee;
     border-radius: 50%;
     transition: all 0.3s ease;
 
-    &:hover {
-      color: #ffffff;
-      background-color: var(--color-dark);
+    svg {
+      transition: transform 0.3s ease;
     }
 
     &.is-active {
-      color: #ffffff;
-      background-color: var(--color-red, #e74c3c);
-      border-color: var(--color-red, #e74c3c);
+      color: var(--color-white);
+      background-color: var(--color-orange);
+      border-color: var(--color-orange);
     }
 
-    svg {
-      width: rem(24);
-      height: rem(24);
+    @include hover {
+      transform: scale(1.1);
+
+      &:not(.is-active) {
+        background-color: #fff9f5;
+      }
     }
   }
 }
