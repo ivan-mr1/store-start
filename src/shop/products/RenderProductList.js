@@ -32,9 +32,10 @@ export default class RenderProductList {
     this.clear();
 
     if (productsSlice.length === 0) {
-      this.container.innerHTML = `
-        <li class="${this.settings.emptyClass}">${this.i18n.emptyMessage}</li>
-      `;
+      const emptyEl = document.createElement('li');
+      emptyEl.className = this.settings.emptyClass;
+      emptyEl.textContent = this.i18n.emptyMessage;
+      this.container.append(emptyEl);
       return;
     }
 
