@@ -1,4 +1,4 @@
-import { I18N, ATTRIBUTES, STATES } from '../constants.js';
+import { I18N, ATTRIBUTES, STATES } from '@shop/constants.js';
 
 /**
  * > 768px: (visibleRange: 2)

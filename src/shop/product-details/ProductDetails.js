@@ -1,5 +1,5 @@
-import { EVENTS, STATES, I18N, ATTRIBUTES } from '../constants.js';
-import { formatPrice } from '../utils.js';
+import { EVENTS, STATES, I18N, ATTRIBUTES } from '@shop/constants.js';
+import { formatPrice } from '@shop/utils.js';
 
 export default class ProductDetails {
   defaultSettings = {
