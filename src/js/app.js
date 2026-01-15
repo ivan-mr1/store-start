@@ -1,9 +1,9 @@
 'use strict';
 import pageNavigation from './modules/pageNavigation';
-import Header from './../components/header/Header';
-import ScrollUpButton from '../components/scrollUpButton/ScrollUpButton';
-import scroller from './../components/scroller/scroller';
-import shop from '../shop/shop';
+import Header from '@components/header/Header';
+import ScrollUpButton from '@components/scrollUpButton/ScrollUpButton';
+import scroller from '@components/scroller/scroller';
+import shop from '@shop/shop';
 
 window.addEventListener('DOMContentLoaded', () => {
   pageNavigation();

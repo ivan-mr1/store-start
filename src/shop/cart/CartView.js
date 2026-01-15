@@ -1,5 +1,5 @@
-import { formatPrice } from '../utils.js';
-import { I18N, ATTRIBUTES, SELECTORS } from '../constants.js';
+import { formatPrice } from '@shop/utils.js';
+import { I18N, ATTRIBUTES, SELECTORS } from '@shop/constants.js';
 
 export default class CartView {
   defaultSelectors = {

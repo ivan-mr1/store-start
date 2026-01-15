@@ -1,5 +1,5 @@
-import ProductCard from '../product-card/ProductCard';
-import { I18N } from '../constants.js';
+import ProductCard from '@shop/product-card/ProductCard';
+import { I18N } from '@shop/constants.js';
 
 export default class RenderProductList {
   defaultSettings = {

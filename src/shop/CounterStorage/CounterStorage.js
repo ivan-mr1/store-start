@@ -1,4 +1,4 @@
-import { STATES } from '../constants.js';
+import { STATES } from '@shop/constants.js';
 
 export default class CounterStorage {
   constructor(counterSelector, storage, eventName) {

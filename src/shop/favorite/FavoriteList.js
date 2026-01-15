@@ -1,6 +1,6 @@
-import CartService from '../cart/CartService.js';
+import CartService from '@shop/cart/CartService.js';
 import FavoriteView from './FavoriteView.js';
-import { EVENTS } from '../constants.js';
+import { EVENTS } from '@shop/constants.js';
 
 export default class FavoriteList {
   constructor(storage, allProducts, cartStorage) {

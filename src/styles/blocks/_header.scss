@@ -1,7 +1,7 @@
-@use '../helpers' as *;
-@use '../../components/header/header-fon';
-@use '../../components/header/burger-2';
-@use '../../components/header/menu-header';
+@use '@styles/helpers' as *;
+@use '@components/header/header-fon';
+@use '@components/header/burger-2';
+@use '@components/header/menu-header';
 
 .header {
   position: fixed;
