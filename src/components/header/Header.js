@@ -1,4 +1,4 @@
-import { bodyLock, bodyUnlock } from '../../js/function/bodyLock.js';
+import { bodyLock, bodyUnlock } from '@js/function/bodyLock.js';
 
 class Header {
   selectors = {
