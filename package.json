@@ -54,7 +54,7 @@
     "vite": "7.3.0",
     "vite-plugin-image-optimizer": "2.0.3",
     "vite-plugin-sass-glob-import": "6.0.2",
-    "vite-plugin-html-inject": "^1.1.2"
+    "vite-plugin-html-inject": "1.1.2"
   },
   "browserslist": [
     "last 5 versions"
