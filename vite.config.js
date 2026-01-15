@@ -1,11 +1,17 @@
 import SassGlob from 'vite-plugin-sass-glob-import';
 import { defineConfig } from 'vite';
 import { sync } from 'glob';
+import injectHTML from 'vite-plugin-html-inject';
 import { imageOptimizerPlugin } from './vite-plugins/image-optimizer';
 import { removeAttributes } from './vite-plugins/removeAttributes';
 
 export default defineConfig({
-  plugins: [SassGlob(), imageOptimizerPlugin(), removeAttributes()],
+  plugins: [
+    injectHTML(),
+    SassGlob(),
+    imageOptimizerPlugin(),
+    removeAttributes(),
+  ],
   build: {
     rollupOptions: {
       input: sync('src/**/!(_)*.html'.replace(/\\/g, '/')),
