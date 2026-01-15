@@ -3,11 +3,7 @@
  * Поддерживает YouTube видео, hash-навигацию, focus trap и accessibility
  */
 
-import {
-  getBodyLockStatus,
-  bodyLock,
-  bodyUnlock,
-} from '../../js/function/bodyLock';
+import { getBodyLockStatus, bodyLock, bodyUnlock } from '@js/function/bodyLock';
 
 import PopupYoutube from './PopupYoutube';
 

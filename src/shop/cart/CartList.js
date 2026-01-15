@@ -1,6 +1,6 @@
 import CartService from './CartService.js';
 import CartView from './CartView.js';
-import { EVENTS, SELECTORS } from '../constants.js';
+import { EVENTS, SELECTORS } from '@shop/constants.js';
 
 export default class CartList {
   settings = { minQuantity: 1, maxQuantity: 15 };

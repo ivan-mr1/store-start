@@ -1,4 +1,4 @@
-import { EVENTS, STATES, ATTRIBUTES } from '../constants.js';
+import { EVENTS, STATES, ATTRIBUTES } from '@shop/constants.js';
 
 export default class FavoriteDropdown {
   selectors = {
