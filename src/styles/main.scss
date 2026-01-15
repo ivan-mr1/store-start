@@ -27,7 +27,7 @@
 @use 'blocks/page';
 @use 'blocks/common';
 @use 'blocks/header';
-@use 'blocks/footer';
+@use '../html/layouts/footer/footer';
 @use 'blocks/hero';
-@use 'blocks/about';
-@use 'blocks/partners';
+@use '../html/sections/about/about';
+@use '../html/sections/partners/partners';

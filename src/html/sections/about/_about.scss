@@ -1,4 +1,4 @@
-@use '../helpers' as *;
+@use '../../../styles/helpers' as *;
 
 .about {
   @include adaptive-clamp('padding-bottom', 40, 20);
